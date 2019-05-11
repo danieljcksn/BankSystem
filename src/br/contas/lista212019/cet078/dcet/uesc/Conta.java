@@ -49,9 +49,11 @@ public class Conta {
     public void setCliente(Cliente cliente) {
         this.cliente = cliente;
     }
+
     public boolean creditar(double valor){
         this.saldo += valor;
         return true;
+        
     }
     public boolean debitar(double valor){
         if(this.saldo < valor){
@@ -78,6 +80,7 @@ public class Conta {
             System.out.println("ERRO! Saldo insuficiente");
             // Mesmo problema da anterior, mas como a classe vai ter uma única aplicação, podemos deixar assim
             return false;
+
         }
     }
 }
