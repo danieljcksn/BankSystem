@@ -40,7 +40,6 @@ public class ArrayDeClientes {
             System.out.println("Erro: O número máximo de clientes já foi alcançado.");
             return false;
         }else{
-<<<<<<< HEAD
             //Verificando se o cliente não foi cadastrado anteriormente
             for(aux = indice; aux > 0; aux--){
                 if(clientes[aux].equals(cliente)){
@@ -53,12 +52,10 @@ public class ArrayDeClientes {
                 return false;
             }else{
                 clientes[indice] = new Cliente(cliente.getNome(),cliente.getCpf());
-=======
             teste = existeCliente(cliente.getCpf());
             if(!teste){
             // Caso não exista um cliente igual ao informado, o novo cliente é inserido
                 clientes[indice] = cliente;
->>>>>>> 4efa3893b1bc89955cf11c30b2caf5d7ba3cea6b
                 indice++;
                 return true;
             }else{
