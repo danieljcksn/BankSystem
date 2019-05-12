@@ -48,15 +48,29 @@ public class ArrayDeClientes {
     
     public Cliente procurarCliente(int cpf){
         for(aux = indice; aux > 0; aux--){
-            if(clientes[aux].cpf == cpf){
+            if(clientes[aux].getCpf() == cpf){
                 return clientes[aux];
             }
-            //Verifica em todas as posições do array de clientes um cliente com o
-            //mesmo CPF do passado como parâmetro
-            //Caso o encontre, retorna o cliente encontrado naquela posição do array
+            /* Verifica em todas as posições do array de clientes um cliente com o
+            mesmo CPF do passado como parâmetro
+            Caso o encontre, retorna o cliente encontrado naquela posição do array */
         }
         return null;
         //Caso não encontre no array, retorna null.
     }
     
+    public boolean atualizarCliente(Cliente cliente){
+        if(procurarCliente(cliente.getCpf()) == null){
+            //Caso não exista nenhum cliente com o CPF informado, retorna 'false'
+            System.out.println("Erro: Esse cliente não possui cadastro.");
+            return false;
+        }else{
+            /* caso o retorno da função seja diferente de null, ou seja, caso exista
+            o cliente cadastrado no array, o mesmo será substituido pelo cliente
+            passado como parâmetro */
+            System.out.println("Sucesso: O cadastro do cliente foi atualizado");
+            clientes[aux] = cliente;
+            return true;
+        } 
+    }
 }
