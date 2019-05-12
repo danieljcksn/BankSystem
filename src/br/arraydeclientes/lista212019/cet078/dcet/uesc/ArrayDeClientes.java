@@ -45,4 +45,18 @@ public class ArrayDeClientes {
         //Tive que colocar esse return, o netbeans estava obrigando.
         return false;
     }
+    
+    public Cliente procurarCliente(int cpf){
+        for(aux = indice; aux > 0; aux--){
+            if(clientes[aux].cpf == cpf){
+                return clientes[aux];
+            }
+            //Verifica em todas as posições do array de clientes um cliente com o
+            //mesmo CPF do passado como parâmetro
+            //Caso o encontre, retorna o cliente encontrado naquela posição do array
+        }
+        return null;
+        //Caso não encontre no array, retorna null.
+    }
+    
 }
