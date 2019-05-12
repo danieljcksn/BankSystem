@@ -17,7 +17,7 @@ public class ArrayDeContas {
             }
         }
         return -1;
-        //Se não encontrar um cliente com o mesmo CPF que o informado pelo usuário, retorna -1 como indicação.
+        //Se não encontrar uma conta com o mesmo NÚMERO que o informado pelo usuário, retorna -1 como indicação.
     }
     public boolean existeConta(int numero){
         int teste;
