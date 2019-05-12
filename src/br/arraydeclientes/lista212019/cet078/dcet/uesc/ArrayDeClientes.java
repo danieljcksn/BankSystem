@@ -17,7 +17,7 @@ public class ArrayDeClientes {
             return false;
         }else{
             //Verificando se o cliente não foi cadastrado anteriormente
-            for(aux = indice; aux < 51; aux++){
+            for(aux = indice; aux > 0; aux--){
                 if(clientes[aux] == cliente){
                    aux = -1;
                    break;
@@ -35,7 +35,7 @@ public class ArrayDeClientes {
     
     public boolean existeCliente(int cpf){
         for(aux = indice; aux > 0; aux--){
-            if(clientes[aux].cpf == cpf){
+            if(clientes[aux].getCpf() == cpf){
                 return true;
             }else{
                 return false;
