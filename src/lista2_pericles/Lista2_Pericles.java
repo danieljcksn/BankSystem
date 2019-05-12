@@ -3,6 +3,7 @@ package lista2_pericles;
 import br.clientes.lista212019.cet078.dcet.uesc.Cliente;
 import br.contas.lista212019.cet078.dcet.uesc.Conta;
 import br.testes.lista212019.cet078.dcet.uesc.TesteConta;
+import br.arraydeclientes.lista212019.cet078.dcet.uesc.ArrayDeClientes;
 
 public class Lista2_Pericles {
 
@@ -40,6 +41,8 @@ public class Lista2_Pericles {
     /****
      * Fim do teste, questão 6 bloco II
      */
+    ArrayDeClientes arrei = new ArrayDeClientes();
+    arrei.inserirCliente(guedes);
+    arrei.inserirCliente(bolsonaro);
     }
-    
 }

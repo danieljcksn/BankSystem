@@ -9,7 +9,6 @@ public class ArrayDeClientes {
     Cliente[] clientes = new Cliente[50];
     public ArrayDeClientes(){
         this.indice = 0;
-        this.clientes = null;
     }
     public boolean inserirCliente(Cliente cliente){
         if(indice>50){
