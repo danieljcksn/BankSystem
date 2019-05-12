@@ -28,22 +28,22 @@ public class Lista2_Pericles {
 
         Cliente bolsonaro = new Cliente("bosnobono",5678);
         Cliente guedes = new Cliente("guedes",8765);
-        
+       /*Teste em que ocorre deve ocorrer falha,
+              vou comentar para o código
+       continuar funcional sem retornar exceções*/
         Conta contaBolsonaro = new Conta(4853,10,bolsonaro);
         Conta contaGuedes = new Conta(2398,10,guedes);
-        
+       /* 
         if(teste.teste(contaBolsonaro, contaGuedes, 50, 10)){
             System.out.println("Teste 2 aprovado!");
         }else{
             System.out.println("Falha no teste 2");
         }
+        */
         
     /****
      * Fim do teste, questão 6 bloco II
      */
-    ArrayDeClientes arrei = new ArrayDeClientes();
-    arrei.inserirCliente(bolsonaro);
-    arrei.inserirCliente(bolsonaro);
 
     }
 }

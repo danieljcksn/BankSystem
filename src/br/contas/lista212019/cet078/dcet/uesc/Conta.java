@@ -52,8 +52,8 @@ public class Conta {
     }
     public boolean debitar(double valor){
         if(this.saldo < valor){
-            System.out.println("Erro!\nSaldo Insuficiente.");
-            return false;
+            IllegalArgumentException erro = new IllegalArgumentException();
+            throw erro;
         }else{
            this.saldo = this.saldo - valor; 
            return true;
@@ -67,15 +67,13 @@ public class Conta {
     situação a ponto de tornar a sua reutilização bastante difícil. 
     */
     public boolean transferir(Conta destino, double valor){
-        if(this.saldo>=valor){
+        if(this.saldo<valor){
+            IllegalArgumentException error = new IllegalArgumentException();
+            throw error;
+        }else{
             this.saldo -= valor;
             destino.saldo += valor;
             return true;
-        }else{
-            System.out.println("ERRO! Saldo insuficiente");
-            // Mesmo problema da anterior, mas como a classe vai ter uma única aplicação, podemos deixar assim
-            return false;
-
         }
     }
 }
