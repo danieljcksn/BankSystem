@@ -42,7 +42,7 @@ public class Lista2_Pericles {
      * Fim do teste, questão 6 bloco II
      */
     ArrayDeClientes arrei = new ArrayDeClientes();
-    arrei.inserirCliente(guedes);
+    arrei.inserirCliente(bolsonaro);
     arrei.inserirCliente(bolsonaro);
 
     }

@@ -18,7 +18,7 @@ public class ArrayDeClientes {
         }else{
             //Verificando se o cliente não foi cadastrado anteriormente
             for(aux = indice; aux > 0; aux--){
-                if(clientes[aux] == cliente){
+                if(clientes[aux].equals(cliente)){
                    aux = -1;
                    break;
                 }
@@ -27,6 +27,7 @@ public class ArrayDeClientes {
                 System.out.println("Erro: O cliente já está cadastrado.");
                 return false;
             }else{
+                clientes[indice] = new Cliente(cliente.getNome(),cliente.getCpf());
                 indice++;
                 return true;
             }
