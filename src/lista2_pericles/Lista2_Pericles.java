@@ -6,10 +6,9 @@ import br.testes.lista212019.cet078.dcet.uesc.TesteConta;
 
 public class Lista2_Pericles {
     /**
-     * @param args the command line arguments
-     */
+     Eae, Brenu 
+    */
     public static void main(String[] args) {
-        // TODO code application logic here
 
     }
     

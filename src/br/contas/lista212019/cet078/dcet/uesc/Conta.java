@@ -49,6 +49,19 @@ public class Conta {
     public void setCliente(Cliente cliente) {
         this.cliente = cliente;
     }
-
     
+    public void debitar(double valor){
+        if(this.saldo < valor){
+            System.out.println("Erro!\nSaldo Insuficiente.");
+        }else{
+           this.saldo = this.saldo - valor; 
+        }
+    }
+    /*Nas linguagens de POO, as classes são estruturas que abstraem um conjunto
+    de objetos com características similares, ou seja, as mesmas não devem ser 
+    utilizadas para realizarem a interação com o usuário e sim para 'moldar' os objetos apenas.
+    Além disso, uma das principais vantagens da POO é a reutilização de código. Ao utilizar as classes
+    para interações específicas com determinado usuário, esse código torna-se tão específico para determinada
+    situação a ponto de tornar a sua reutilização bastante difícil.
+    */
 }
