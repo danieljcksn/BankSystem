@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package br.clientes.lista212019.cet078.dcet.uesc;
 
 /**
@@ -11,7 +6,7 @@ package br.clientes.lista212019.cet078.dcet.uesc;
  */
 public class Cliente {
     private String nome;
-    private int cpf;
+    public int cpf;
 
     public Cliente(String nome, int cpf){
         this.nome = nome;
