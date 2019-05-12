@@ -49,12 +49,16 @@ public class Conta {
     public void setCliente(Cliente cliente) {
         this.cliente = cliente;
     }
-    
-    public void debitar(double valor){
+    public void creditar(double valor){
+        this.saldo = this.saldo + valor;
+    }
+    public boolean debitar(double valor){
         if(this.saldo < valor){
             System.out.println("Erro!\nSaldo Insuficiente.");
+            return false;
         }else{
            this.saldo = this.saldo - valor; 
+           return true;
         }
     }
     /*Nas linguagens de POO, as classes são estruturas que abstraem um conjunto
@@ -64,4 +68,13 @@ public class Conta {
     para interações específicas com determinado usuário, esse código torna-se tão específico para determinada
     situação a ponto de tornar a sua reutilização bastante difícil. 
     */
+    
+    public void transferir(Conta c, double valor){
+        if(debitar(valor)){
+            c.saldo = c.saldo + valor;
+            System.out.println("Transferência Concluída!");
+        }else{
+            System.out.println("Erro: Saldo insuficiente.");
+        }
+    }
 }
