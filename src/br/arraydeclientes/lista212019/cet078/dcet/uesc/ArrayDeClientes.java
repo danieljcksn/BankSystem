@@ -17,7 +17,7 @@ public class ArrayDeClientes {
             return false;
         }else{
             //Verificando se o cliente não foi cadastrado anteriormente
-            for(aux = indice; aux > 0; aux--){
+            for(aux = indice; aux < 51; aux++){
                 if(clientes[aux] == cliente){
                    aux = -2;
                    break;

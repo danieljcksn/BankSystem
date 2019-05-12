@@ -44,5 +44,6 @@ public class Lista2_Pericles {
     ArrayDeClientes arrei = new ArrayDeClientes();
     arrei.inserirCliente(guedes);
     arrei.inserirCliente(bolsonaro);
+
     }
 }
