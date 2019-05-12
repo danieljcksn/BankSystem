@@ -15,6 +15,10 @@ public class Conta {
     private double saldo;
     private Cliente cliente;
     
+    public Conta(){
+        
+    }
+    
     public Conta(int numero, double saldo, Cliente cliente){
         this.numero = numero;
         this.saldo = saldo;
