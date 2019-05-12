@@ -27,6 +27,7 @@ public class ArrayDeClientes {
                 System.out.println("Erro: O cliente já está cadastrado.");
                 return false;
             }else{
+                clientes[indice] = cliente;
                 indice++;
                 return true;
             }
