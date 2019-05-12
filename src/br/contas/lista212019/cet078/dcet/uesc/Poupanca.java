@@ -13,8 +13,12 @@ public class Poupanca extends Conta {
         super(numero,saldo,cliente);
 
     }
-    public void renderJuros(double taxa){
+    public boolean renderJuros(double taxa){
         this.rentabilidade = this.getSaldo() * taxa;
-        this.creditar(this.rentabilidade);
+        if(this.creditar(this.rentabilidade)){
+            return true;
+        }else{
+            return false;
+        }
     }
 }

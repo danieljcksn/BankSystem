@@ -62,6 +62,7 @@ public class ArrayDeClientes {
                 return false;
             }
         }
+      }
     }
     public Cliente procurarCliente(int cpf){
         int teste;

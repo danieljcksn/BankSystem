@@ -17,6 +17,8 @@ public class TesteConta {
                         && contaTeste2.transferir(contaTeste1, valor2)){
                 System.out.println("O saldo da primeira conta após transferência é "+contaTeste1.getSaldo());
                 System.out.println("O saldo da segunda conta após transferência é "+contaTeste2.getSaldo());
+                    contaTeste1.setSaldo(0);
+                    contaTeste2.setSaldo(0);
                     return true;
                 }else{
                     return false;

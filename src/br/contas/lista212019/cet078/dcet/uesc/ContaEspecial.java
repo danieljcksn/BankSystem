@@ -10,9 +10,13 @@ public class ContaEspecial extends Conta {
         super(numero,saldo,cliente);
     }
     
-    public void renderBonus(double valor){
+    public boolean renderBonus(double valor){
         double total;
         total = valor + valor*0.05;
-        this.creditar(total);
+        if(this.creditar(total)){
+            return true;
+        }else{
+            return false;
+        }
     }
 }
