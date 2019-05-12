@@ -19,11 +19,11 @@ public class ArrayDeClientes {
             //Verificando se o cliente não foi cadastrado anteriormente
             for(aux = indice; aux < 51; aux++){
                 if(clientes[aux] == cliente){
-                   aux = -2;
+                   aux = -1;
                    break;
                 }
             }
-            if(aux == -2){
+            if(aux == -1){
                 System.out.println("Erro: O cliente já está cadastrado.");
                 return false;
             }else{
@@ -31,5 +31,17 @@ public class ArrayDeClientes {
                 return true;
             }
         }
+    }
+    
+    public boolean existeCliente(int cpf){
+        for(aux = indice; aux > 0; aux--){
+            if(clientes[aux].cpf == cpf){
+                return true;
+            }else{
+                return false;
+            }
+        }        
+        //Tive que colocar esse return, o netbeans estava obrigando.
+        return false;
     }
 }
